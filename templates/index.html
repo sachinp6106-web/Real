@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Note Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    <div class="page-wrapper">
+        <div class="glass-card">
+            <div class="avatar">💵</div>
+            <h1 class="title">Fake or Real Currency Note Detection</h1>
+            <p style="margin-bottom: 30px; color: #011113; font-size: 1.1rem;">Upload a currency note image or enter features to detect authenticity using AI.</p>
+            <form action="/predict" method="post" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" id="fileInput" required>
+                <label for="fileInput" class="file-label">📁 Choose Image</label>
+                <button type="submit" class="predict-btn">Predict</button>
+            </form>
+            {% if prediction %}
+            <div class="result-box animate">
+                <h2>Prediction: <span class="highlight">{{ prediction }}</span></h2>
+                <img src="{{ img_path }}" alt="Uploaded Image" class="result-image">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <footer>
+        &copy; {{ 2025 }} Currency Note Authenticator | Made with 💰
+    </footer>
+</body>
+</html>
+

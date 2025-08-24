@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Currency Note Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    <div class="page-wrapper">
+        <div class="glass-card">
+            <div class="avatar">📄</div>
+            <h1 class="title">About This Project</h1>
+            <p style="color: #417880; font-size: 1.1rem; margin-bottom: 20px;">
+                This AI-powered web application detects whether a given currency note is real or fake based on image and feature analysis.
+            </p>
+            <ul style="text-align: left; color: #2c745c; font-size: 1rem; margin: 0 auto; max-width: 350px;">
+                <li>📷 Upload an image of a currency note</li>
+                <li>⚡ Get instant AI-based prediction</li>
+                <li>🔒 Fast, easy-to-use & secure</li>
+            </ul>
+            <p style="margin-top: 30px; color: #5f979e; font-size: 0.95rem;">Developed using Python, CNNs, and Flask framework.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; {{ 2025 }} Currency Note Authenticator | Made with 💰
+    </footer>
+</body>
+</html>
